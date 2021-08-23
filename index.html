@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!doctype html>
+<html>
+  <head>
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="utf-8" http-equiv="encoding">
+
+      <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="google-spreadsheet.js"></script>
+      <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="main.css">
+    <title>SLP Fetching Test</title>
+
+    <script type = "text/JavaScript">
+
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+
+    </script>
+
+  </head>
+
+  <body onload = "JavaScript:AutoRefresh(600000);">
+
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2></h2>
+            </div>
+        </div>
+
+        <div class="table-responsive-lg">
+            <table id="mmrTable" class="table table-bordered table-condensed table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th  id="guild_id" style="width: 5%">Rank</th>
+                        <th style="width: 18%">Name</th>
+                        <th style="width: 8%">MMR</th>
+                        <th style="width: 5%">Season Rank</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="last_update">
+        </div>
+    </div>
+    <!--
+    <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
+    <coingecko-coin-ticker-widget currency="php" coin-id="smooth-love-potion" locale="en"></coingecko-coin-ticker-widget>
+    <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
+    <coingecko-coin-ticker-widget currency="php" coin-id="axie-infinity" locale="en"></coingecko-coin-ticker-widget>
+    <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
+    <coingecko-coin-ticker-widget currency="php" coin-id="ethereum" locale="en"></coingecko-coin-ticker-widget>
+-->
+  <script type"text/javascript" src="leaderboard.js"></script>
+  <script src="fetchMMR.js">
+
+  </script>
+
+  </body>
+</html>
