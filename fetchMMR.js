@@ -1,4 +1,4 @@
-var scholarDict;
+ var scholarDict;
 var rankDict;
 var scholarInfoList;
 
