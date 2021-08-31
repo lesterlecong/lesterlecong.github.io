@@ -7,7 +7,6 @@
 
       <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
       <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="google-spreadsheet.js"></script>
       <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="main.css">
@@ -24,6 +23,12 @@
   </head>
 
   <body onload = "JavaScript:AutoRefresh(600000);">
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 
       <div class="container">
         <div class="row">
@@ -55,7 +60,6 @@
     <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
     <coingecko-coin-ticker-widget currency="php" coin-id="ethereum" locale="en"></coingecko-coin-ticker-widget>
 -->
-  <script type"text/javascript" src="leaderboard.js"></script>
   <script src="fetchMMR.js">
 
   </script>

@@ -45,25 +45,49 @@ function getSeasonRank(json_data){
 
 function processProfile(){
 
-    var leader = JSON.parse(leaderboard);
+    var firebaseConfig = {
+      apiKey: "AIzaSyDlbyEUYiZwaYp89qtPBw6p4Tu0V3aW-As",
+      authDomain: "epps-5f1e3.firebaseapp.com",
+      databaseURL: "https://epps-5f1e3-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "epps-5f1e3",
+      storageBucket: "epps-5f1e3.appspot.com",
+      messagingSenderId: "763329415950",
+      appId: "1:763329415950:web:e2b831a6a5b620d34e255f",
+      measurementId: "G-ZFFNNXQVKP"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
-    leader.sort(function(a, b) {
-      return a.rank - b.rank;
-    });
 
-    leader.forEach((item, i) => {
-        display(i+1, item)
-    });
+    const dbRef = firebase.database().ref("scholars");
+    const usersRef = dbRef.child('scholars');
+
+    scholarList = [];
+
+    dbRef.on("value", snap => {
+       let user = snap.val();
+       scholarList = Object.values(user);
+       //console.log(Object.values(user))
+
+       scholarList.sort(function(a, b) {
+         return b.mmr - a.mmr;
+       });
+
+       console.log(scholarList)
+
+       scholarList.forEach((item, i) => {
+           display(i+1, item)
+       });
+   });
 
 
+   const last_update_ref = firebase.database().ref("lastupdate");
+   last_update_ref.on("value", snap => {
+
+      $("#last_update").append("<p>Last Update:" + Object.values(snap.val())[0] + "</p>");
+
+   });
 }
-
-async function try_(){
-    mmr_data = await fetchMMRData("ronin:b2b3959abc631ffc324294f44ebfb81afc231cbc");
-    console.log(mmr_data.items[11].name);
-    console.log(mmr_data.items[11].elo);
-}
-
 
 document.addEventListener("DOMContentLoaded", function() {
     scholarDict = {};
@@ -78,8 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     processProfile();
 
-    $("#last_update").append("<p>Last Update:" + last_update + "</p>");
-    console.log(today);
+
 
 
     //try_();
