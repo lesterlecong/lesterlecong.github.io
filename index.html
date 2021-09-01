@@ -22,7 +22,7 @@
 
   </head>
 
-  <body onload = "JavaScript:AutoRefresh(600000);">
+  <body onload = "JavaScript:AutoRefresh(30000);">
       <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
 
@@ -31,25 +31,29 @@
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 
       <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <h2></h2>
-            </div>
-        </div>
-
-        <div class="table-responsive-lg">
-            <table id="mmrTable" class="table table-bordered table-condensed table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th  id="guild_id" style="width: 5%">Rank</th>
-                        <th style="width: 18%">Name</th>
-                        <th style="width: 8%">MMR</th>
-                        <th style="width: 5%">Season Rank</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-        <div id="last_update">
+          <div class="row">
+            <!--div class="col-2">
+                <div id="list-example" class="list-group">
+                  <a class="list-group-item list-group-item-action" href="#list-item-1">Leaderboard</a>
+                  <a class="list-group-item list-group-item-action" href="#list-item-2">SLP Tracker</a>
+                </div>
+            </div-->
+            <!--div class="col-10"-->
+                <div class="table-responsive-lg">
+                    <table id="mmrTable" class="table table-bordered table-condensed table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th  id="guild_id" style="width: 24.5%">Rank</th>
+                                <th style="width: 25%">Name</th>
+                                <th style="width: 25%">MMR</th>
+                                <th style="width: 26.5%">Season Rank</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div id="last_update">
+                </div>
+            <!--/div-->
         </div>
     </div>
     <!--
