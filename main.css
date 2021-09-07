@@ -1,3 +1,5 @@
+html, body {height: 100%;}
+
 .progressBar {
   width: 100%;
   background-color: grey;
@@ -11,7 +13,7 @@
 
 table tbody {
   display: block;
-  max-height: 500px;
+  max-height: 80vh;
   overflow-y: scroll;
 }
 
