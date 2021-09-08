@@ -10,8 +10,6 @@
       <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="main.css">
-      <link rel="stylesheet" type="text/css" href="table.css">
-      <link rel="stylesheet" type="text/css" href="util.css">
     <title>SLP Fetching Test</title>
 
     <script type = "text/JavaScript">
@@ -31,40 +29,33 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-    <div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-                <div class="table100 ver3 m-b-110">
-                <div class="table100-head">
-                    <table>
-                        <thead>
-                            <tr class="row100 head">
-                                <th class="cell100 column1">Rank</th>
-                                <th class="cell100 column2" >Name</th>
-                                <th class="cell100 column3" >MMR</th>
-                                <th class="cell100 column4" >Season Rank</th>
+      <
+      <div class="container">
+          <!--div class="row">
+            <div class="col-2">
+                <div id="list-example" class="list-group">
+                  <a class="list-group-item list-group-item-action" href="index.html">Leaderboard</a>
+                  <a class="list-group-item list-group-item-action" href="slp.html">SLP Tracker</a>
+                </div>
+            </div-->
+            <!--div class="col-10"-->
+                <div class="table-responsive-lg">
+                    <table id="mmrTable" class="table table-bordered table-condensed table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th  id="guild_id" style="width: 24.5%">Rank</th>
+                                <th style="width: 25%">Name</th>
+                                <th style="width: 25%">MMR</th>
+                                <th style="width: 26.5%">Season Rank</th>
                             </tr>
                         </thead>
                     </table>
                 </div>
-          <div class="table100-body js-pscroll">
-						<table id="mmrTable">
-
-						</table>
-					</div>
-                    <div id="last_update">
-                    </div>
-				</div>
                 <div id="last_update">
-            </div>
-            </div>
-
-        </div></div>
-
-        <div id="last_update">
+                </div>
+            <!--/div>
+        </div-->
     </div>
-    </div>
-
     <!--
     <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
     <coingecko-coin-ticker-widget currency="php" coin-id="smooth-love-potion" locale="en"></coingecko-coin-ticker-widget>
@@ -73,7 +64,6 @@
     <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
     <coingecko-coin-ticker-widget currency="php" coin-id="ethereum" locale="en"></coingecko-coin-ticker-widget>
 -->
-
   <script src="fetchMMR.js">
 
   </script>

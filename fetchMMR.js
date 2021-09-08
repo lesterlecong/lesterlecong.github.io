@@ -5,13 +5,21 @@ var scholarInfoList;
 function fetchMMRData(ronin_addr){
 
 }
-
+/*
 function display(rank, scholarInfo) {
     $("#mmrTable tbody").append("<tr>" +
         "<td>"+ String(rank) + "</td>" +
         "<td>" + scholarInfo.name + "</td>" +
         "<td>"+ scholarInfo.mmr + "</td>" +
         "<td>"+ scholarInfo.rank + "</td>" +
+        "</tr>");
+}*/
+function display(rank, scholarInfo) {
+    $("#mmrTable tbody").append('<tr class="row100 body">' +
+        '<td class="cell100 column1">'+ String(rank) + "</td>" +
+        '<td class="cell100 column1" >' + scholarInfo.name + "</td>" +
+        '<td class="cell100 column1" >'+ scholarInfo.mmr + "</td>" +
+        '<td class="cell100 column1" >'+ scholarInfo.rank + "</td>" +
         "</tr>");
 }
 
